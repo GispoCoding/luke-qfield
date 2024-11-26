@@ -40,6 +40,7 @@ Klikataan sovelluksen vasemmasta yläreunasta **Valikko** auki, aukeavasta valik
 Pyyhkäisemällä asetus-valikkoa vasemmalle päädytään **Paikannus**-välilehdelle, joka on hyödyllinen varsinkin ulkoisia paikannuslaitteita
 käytettäessä. Täältä voi laittaa esimerkiksi tarkkuusindikaattorin aktiiviseksi, jolloin digitoitaessa näkee suoraan paikannuksen luotettavuuden.
 
-**Käyttäjänimen lisäys**: siirry asetus-valikossa tämän jälkeen oikeanpuolimmaiseen **Muuttujat**-välilehteen. Sieltä näkee sekä tietyt QGISin versio- ym. muuttujat että mobiililaitteen käyttöliittymän muuttujat. Täällä voi myös määritellä omia muuttujia, ja lisätään nyt käyttäjänimi, jotta muokkaustiedot tulevat automaattisesti talteen digitoitaessa QFieldilla:
+**Käyttäjänimen lisäys**: siirry asetus-valikossa tämän jälkeen oikeanpuolimmaiseen **Muuttujat**-välilehteen. Sieltä näkee sekä tietyt QGISin versio- ym. muuttujat että mobiililaitteen käyttöliittymän muuttujat. Täällä voisi myös määritellä omia muuttujia, kuten lisätä  käyttäjänimi, jotta muokkaustiedot tulevat automaattisesti talteen digitoitaessa QFieldilla (Huom. tämä ominaisuus ei ole käytössä enää
+projektin uusimmassa versiossa):
 
 - Klikkaa alareunan **Lisää uusi muuttuja**, ja anna muuttujalle nimeksi **username** sekä arvoksi oma nimesi ja/tai laitteesi nimi.

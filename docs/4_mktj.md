@@ -11,12 +11,12 @@ Kun edeltävien sivujen toimenpiteet on tehty (valmistelu QGISillä, paketointi 
 
 ## Tietojen keruu ja muokkaus
 
-QGISissä valmisteltu Geopackage-tiedosto (mktj.gpgk), sisältää tasoja, jotka on mallinnettu yksinkertaistaen Metsäkoetietojärjestelmän  testitietokannan perusteella. Geopackage sisältää samat päätaulut sisältäen samat attribuutit ja tietotyypit, sekä taulujen väliset  relaatiot. Kaikkia koodi-tauluja tai ulkoisia tietolähteitä ei ole testiversiossa mukana. 
+QGISissä valmisteltu Geopackage-tiedosto (mktj.gpkg), sisältää tasoja, jotka on mallinnettu yksinkertaistaen Metsäkoetietojärjestelmän  testitietokannan perusteella. Geopackage sisältää samat päätaulut sisältäen samat attribuutit ja tietotyypit, sekä taulujen väliset  relaatiot. Kaikkia koodi-tauluja tai ulkoisia tietolähteitä ei ole testiversiossa mukana, joten osa tiedoista syötetään suoraan koodiarvona. Kooditaulujen lisäys myöhemmin on kuitenkin mahdollista, jolloin selkokielinen ominaisuusarvo on mahdollista konfiguroida näkymään lomakkeessa, kunhan tarvittava relaatio taulujen välillä luodaan QGIS-projektissa. 
 
 - Uutena attribuuttina tasoille on lisätty UUID-kenttä (universally unique identifier) dokumentaation suositusten mukaisesti:
 [https://docs.qfield.org/how-to/attributes-form/#key-handling](https://docs.qfield.org/how-to/attributes-form/#key-handling). Tieto takaa, että primääriavaimet pysyvät yksilöivinä offline-työskentelyssäkin. QField täyttää UUID-arvon automaattisesti, eikä tietokenttä välttämättä näyt käyttäjälle.
 
-Tasoilla on joitakin muitakin attribuutteja, joiden tiedot QField täyttää automaattisesti oletusarvoilla kuten muokkaaja, luoja, luonti- ja muokkaushetki.
+Tasoilla on joitakin muitakin attribuutteja, joiden tiedot QField täyttää automaattisesti oletusarvoilla kuten muokkaaja, luoja, luonti- ja muokkaushetki. Myös geometrioihin liittyviä arvoja, kuten pinta-ala ja sijaintipisteet on määritetty laskettavaksi QFieldissä automaattisesti, vaikka ne voidaankin tuotantojärjestelmässä myös antaa esimerkiksi tietokannan tai muun taustajärjestelmän  laskettaviksi.
 
 ### Koemetsikkö-taso
 
@@ -31,7 +31,7 @@ Klikataan takaisin karttaikkunaan ja digitoidaan koemetsikkö haluttuun sijainti
 
 Pakollisia tietoja on ainoastaan koemetsikön voimassaolon alkupäivä; kun se on lisätty, attribuuttilomake muuttuu punaisesta (jolloin kohteen tallentaminen ei onnistu) vihreäksi, jolloin tietojen tallentaminen onnistuu ylhäältä ruksista. Tietoja voidaan täydentää myöhemmin QFieldissä (muokkaustilassa ja valitsemalla ko. kohde aktiiviseksi) tai QGISissa.
 
-Koemetsiköllä voi olla useita siihen liittyviä muiden tasojen kohteita: siihen voi liittyä monta koealaa, liittyviä kohteita (liittyvät pisteet, viivat ja alueet), toimenpidettä sekä koetta. Nämä hoidetaan Geopackagessa relaatioilla taulujen välillä (avain taulujen välillä on UUID-kenttä). Näitä kohteita voi lisätä suoraan luotavaan koemetsikköön sitä digitoitaessa. On mentävä attribuuttitaulun **Alikohteet"**-välilehdelle ja lisättävä haluttu liittyvä kohde plus-ikonista, jolloin kyseisen tason attribuuttilomake aukeaa:
+Koemetsiköllä voi olla useita siihen liittyviä muiden tasojen kohteita: siihen voi liittyä monta koealaa, liittyviä kohteita (liittyvät pisteet, viivat ja alueet), toimenpidettä sekä koetta. Nämä hoidetaan Geopackagessa relaatioilla taulujen välillä (avain taulujen välillä on UUID-kenttä). Näitä kohteita voi lisätä suoraan luotavaan koemetsikköön sitä digitoitaessa. On mentävä attribuuttitaulun **Alikohteet**-välilehdelle  (tai toimenpiteiden tapauksessa välilehdelle **Toimenpiteet**) ja lisättävä haluttu liittyvä kohde plus-ikonista, jolloin kyseisen tason attribuuttilomake aukeaa:
 
 [<img src="img/lisaa_alikohde.png" width="300" />](img/lisaa_alikohde.png)
 
@@ -52,11 +52,11 @@ koealalle voidaan luoda alikohde näihin tasoihin
 
 ### Tietojen haku tasoilta
 
-QFieldillä voi hakea kohteita monin tavoin, esimerkiksi tasojen attribuuttien avulla tai koordinaattien avulla (WGS84 sekä projektin koordinaattijärjestelmä (tässä tapauksessa EPSG:3067b) ovat mahdollisia käyttää). Klikkaamalla suurennuslasia QFieldin oikeassa ylänurkassa saa hakuvaihtoehdot esiin:
+QFieldillä voi hakea kohteita monin tavoin, esimerkiksi tasojen attribuuttien avulla tai koordinaattien avulla (WGS84 sekä projektin koordinaattijärjestelmä (tässä tapauksessa EPSG:3067) ovat mahdollisia käyttää). Klikkaamalla suurennuslasia QFieldin oikeassa ylänurkassa saa hakuvaihtoehdot esiin:
 
 [<img src="img/hakuvaihtoehdot.png" width="300" />](img/hakuvaihtoehdot.png)
 
-Esimerkiksi aktiiviselta tasolta kohteita voi hakea syntaksilla `a @<attribuuttinimi> <attribuutin arvo>`: 
+Esimerkiksi kaikilta tasolta voi hakea syntaksilla `af @<attribuuttinimi> <attribuutin arvo>`: 
 
 [<img src="img/haku_tasoilta.png" width="300" />](img/haku_tasoilta.png)
 
@@ -68,9 +68,7 @@ Myös monen kohteen attribuuttien muokkaus:
 
 - Klikkaa päävalikossa tasoa > avaa kohdelista > oikeasta yläkulmasta 3 pistettä > vaihda kohdevalinta > ruksi muokattavat kohteet > muokkaa.
 
-- Tarkemmat ohjeet ja esimerkit tulossa.
-
 ### Karttateemat
 
-- Ei vielä implementoitu
+- Ei implementoitu, kts. [https://docs.qfield.org/how-to/map-themes/](https://docs.qfield.org/how-to/map-themes/)
 

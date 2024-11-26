@@ -8,7 +8,7 @@ Avaa alkuperäinen QGIS-projektisi (eli *ei* se mikä löytyi puhelimesta) tieto
 
 QFieldSync-lisäosan kautta valitse nyt **Synkronoi QFieldistä** (Synchronize from QField) tai vastaavasti työkalupalkista [<img src="img/qfieldsync_import.png" width="150" />](img/qfieldsync_import.png) 
 
-Nyt valitset äsken puhelimesta kopioidun kansion. Nyt kentällä tallentamasi pisteet löytyvät QGISin projektissa. Jos lisäsit kuvia keräämiisi kohteisiin, löytyvät ne mobiililaitteelta tuodun projektikansion DCIM alikansiosta, QGISin attribuuttitaulusta löytyy vain viittaus tiedostonimeen. 
+Nyt valitset äsken puhelimesta kopioidun kansion. Nyt kentällä tallentamasi pisteet löytyvät QGISin projektissa. Jos lisäsit kuvia keräämiisi kohteisiin (esim. osana havaintoja), löytyvät ne mobiililaitteelta tuodun projektikansion DCIM-alikansiosta, QGISin attribuuttitaulusta löytyy vain viittaus tiedostonimeen. 
 
 Voit nyt muokata tietoja avaamalla attribuuttitaulukkoa. Voit myös lisätä uusia kohteita ja alueita tarvittaessa. 
 
