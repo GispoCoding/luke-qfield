@@ -11,9 +11,11 @@ Lataa GeoPackage-tiedosto, joka sisältää projektitiedoston:
 
 - [QGIS-projekti testidatalla (testiversio 1.2)](https://drive.google.com/file/d/1qCH10srvvDcI-jfA6n98BYMIKlSGte0a/view?usp=drive_link)
 
+- [QGIS-projekti testidatalla (testiversio 1.3, viimeisin PoC-versio 26.11.2024)](https://drive.google.com/file/d/1EiWKy6cvu7USGtkZUUDgKxS6s9AgF27s/view?usp=drive_link)
+
 ## Projektin avaaminen
 
-Edellä ladattu GeoPackage-tiedosto sisältää QGIS-projektin, sekä kaikki tarvittavat tasot ja taulukot. Avaa QGIS tietokoneellasi ja raahaa lataamasi GeoPackage-tiedosto QGIS-ohjelmaan. Kun päästät irti tiedostosta niin uusi ikkuna aukeaa. Valitse tästä ainoastaan *projekti_poc* (kuten kuvassa). Silloin QGIS avaa projektin sinulle suoraan, tasot ovat valmiiksi kytketty projektiin, joten tämän takia niitä ei lisätä erikseen.
+Edellä ladattu GeoPackage-tiedosto sisältää QGIS-projektin, sekä kaikki tarvittavat tasot ja taulukot. Avaa QGIS tietokoneellasi ja raahaa lataamasi GeoPackage-tiedosto QGIS-ohjelmaan. Kun päästät irti tiedostosta niin uusi ikkuna aukeaa. Valitse tästä ainoastaan *mktj_poc_project* (kuten kuvassa). Silloin QGIS avaa projektin sinulle suoraan, tasot ovat valmiiksi kytketty projektiin, joten tämän takia niitä ei lisätä erikseen.
 
 [<img src="img/gpkg_drag_and_drop.png" width="500" />](img/gpkg_drag_and_drop.png)
 
@@ -32,25 +34,26 @@ Kokeet ja toimenpiteet -ryhmän alla on seuraavat taulukko-muotoiset tasot (taso
 
 | Taso | Muoto | Selite |
 |----------|----------|----------|
-| Koe| Ei geometriaa| Tehtävistä kokeet. Koe liittyy aina johonkin koesarjaan |
-| Koesarja | Ei geometriaa | |
-| Toimenpide | Ei geometriaa | Kokeelle tilattavat toimenpiteet koemetsikkötasolla|
+| Koe| Ei geometriaa| Koemetsikössä tehtävät kokeet. Sisältää esimerkkidataa. |
+| Koesarja | Ei geometriaa | Koe liittyy aina johonkin koesarjaan. Sisältää esimerkkidataa.  |
+| Toimenpide | Ei geometriaa | Kokeelle tilattavat toimenpiteet koemetsikkötasolla. Sisältää esimerkkidataa. |
+| Havainto| Ei geometriaa| Koemetsikköön liittyviä havaintoja. Myös valokuvan lisäys on mahdollistettu. |
 
-Geometrioita sisältävät tasot:
+Geometrioita sisältävät tasot löytyvät tasovalikosta ryhmien "liittyvät geometriat" ja "perusalueet" alta:
 
 |Taso | Muoto | Selite |
 |----------|----------|----------|
-| Liittyva Piste| Piste | |
-| Liittyva Viiva| Viiva | |
-| Liittyva Alue| Polygoni | |
-| Koeala | Polygoni | |
-| Koemetsikkö | Polygoni | |
+| Liittyva Piste| Piste | Koemetsikköön liittyviä apupisteitä. Kartalla näkyvissä 1:10000 suuremmissa mittakaavoissa. |
+| Liittyva Viiva| Viiva | Koemetsikköön liittyviä viivamaisia kohteita. Kartalla näkyvissä 1:10000 suuremmissa mittakaavoissa.|
+| Liittyva Alue| Polygoni | Koemetsikköön liittyviä aluemaisia kohteita. Kartalla näkyvissä 1:10000 suuremmissa mittakaavoissa.|
+| Koeala | Polygoni | Koemetsiköiden koealoja. |
+| Koemetsikkö | Polygoni | Koetta varten maastoon rajattu alue |
 
 - **Kiinteistöt**-tasoryhmän alla on LUKE:n tarjoamasta WMTS-rajapinnasta tulevia aputasoja kiinteistötunnusten ja -jaotuksien tarkastelemiseksi.
 
 - **Taustakartat**-tasoryhmässä on valittavana erityyppisiä taustakarttoja aineiston tarkastelun ja digitoinnin tueksi.
 
-Ryhmässä "Koodistot" on myös taulukkotasoja, mutta nämä ovat stattisia tauluja, mistä haetaan tietoja yllä oleviin tasoihin, joten näihin ei kannata koskea. Sieltä voi kuitenkin katsoa, mitä koodeja on käytössä.
+Ryhmässä "Koodistot" on esimerkinomaisesti myös taulukkotasoja, mutta nämä ovat staattisia tauluja, mistä haetaan tietoja yllä oleviin tasoihin, joten näihin ei kannata koskea. Sieltä voi kuitenkin katsoa, mitä koodeja on käytössä.
 
 ## Taustakartan lisääminen offline-käyttöä varten
 
