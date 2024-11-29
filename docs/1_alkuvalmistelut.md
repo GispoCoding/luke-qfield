@@ -13,7 +13,7 @@ Lataa GeoPackage-tiedosto, joka sisältää projektitiedoston:
 
 - [QGIS-projekti testidatalla (testiversio 1.3)](https://drive.google.com/file/d/1EiWKy6cvu7USGtkZUUDgKxS6s9AgF27s/view?usp=drive_link)
 
-- [QGIS-projekti testidatalla (viimeisin PoC-versio 1.4, 27.11.2024)][https://drive.google.com/file/d/1XtLZioaPXAVxsS15kpdbOpCQijQyPvq2/view?usp=drive_link]
+- [QGIS-projekti testidatalla (viimeisin PoC-versio 1.4, 27.11.2024)](https://drive.google.com/file/d/1XtLZioaPXAVxsS15kpdbOpCQijQyPvq2/view?usp=drive_link)
 
 ## Projektin avaaminen
 
