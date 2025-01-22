@@ -1,6 +1,6 @@
-# Tervetuloa LUKE:n MetsäKTJ:n QField-kokeilun ohjesivulle.
+# Tervetuloa LUKE:n metsäkokeiden tiedonkeruun QField-kokeilun ohjesivulle.
 
-Täältä löytyy ohjeita, miten QField-sovelluksella voitaisiin käyttää Luonnonvarakeskuksen Metsäkoetietojärjestelmän kanssa. 
+Täältä löytyy ohjeita, miten QField-sovelluksella voitaisiin käyttää Luonnonvarakeskuksen Metsäkokeiden tiedonkeruujärjestelmän kanssa. 
 
 Koko työnkulku pääpiirteissään:
 

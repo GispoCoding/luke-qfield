@@ -1,6 +1,6 @@
-# Metsäkoetietojärjestelmän PoC-version käyttäminen
+# Metsäkokeiden tiedonkeruujärjestelmän PoC-version käyttäminen
 
-Kun edeltävien sivujen toimenpiteet on tehty (valmistelu QGISillä, paketointi ja siirto QFieldiin, asetusten ja käyttäjnimen muokkaus) on tehty, voidaan ruveta testaamaan Metsäkoetietojärjestelmän PoC-version (jatkossa MKTJ-PoC) käyttöä digitointiin, datan tarkasteluun ja keruuseen. 
+Kun edeltävien sivujen toimenpiteet on tehty (valmistelu QGISillä, paketointi ja siirto QFieldiin, asetusten ja käyttäjnimen muokkaus) on tehty, voidaan ruveta testaamaan Metsäkokeiden tiedonkeruu järjestelmän PoC-version käyttöä digitointiin, datan tarkasteluun ja keruuseen. 
 
 ## Huomioita 
 
